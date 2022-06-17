@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+main {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(./assets/bg-intro-mobile.png);
+  background-color: hsl(0, 100%, 74%);
+  padding: 100px 0;
+}
+
+.container {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 1fr;
+  text-align: center;
+  padding: 0 20px;
+  margin: 0;
+}
+
+.left {
+  margin-bottom: 50px;
+}
+
+.description-title {
+  color: white;
+  font-size: 2rem;
+  line-height: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  color: white;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.form-title {
+  color: white;
+  background-color: hsl(247, 32%, 48%);
+  border-radius: 10px;
+  box-shadow: 0px 5px 1px rgba(0, 0, 0, 0.4);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-title p {
+  padding: 0.5rem 1.8rem;
+}
+
+.form-title p span {
+  font-weight: bold;
+}
+
+form {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 5px 1px rgba(0, 0, 0, 0.4);
+}
+
+.input-div {
+  margin-bottom: 15px;
+  outline: none;
+}
+.form-input:focus{
+  outline: 1px solid rgb(8, 8, 37);
+}
+.form-input {
+  outline: none;
+
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: transparent;
+  color: #333;
+}
+
+.form-input::placeholder {
+  color: rgb(117,116,121);
+  font-family: 'Poppins', sans-serif;
+}
+
+button {
+  width: 100%;
+  padding: 20px 0;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  box-shadow: 0px 5px 2px rgba(57, 163, 115, 0.4);
+  background-color: hsl(154, 59%, 51%);
+  color: white;
+  margin-bottom: 20px;
+}
+
+.terms {
+  color: gray;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.terms span {
+  color: hsl(0, 100%, 74%);
+}
+
+
+@media (min-width:650px) {
+  main {
+    background-image: url(./assets/bg-intro-desktop.png);
+  }
+
+  .container {
+    text-align: left;
+    max-width: 1200px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+  }
+
+
+  .description {
+    color: white;
+    line-height: 2.2rem;
+  }
+
+  .right {
+    max-width: 500px;
+  }
+}
