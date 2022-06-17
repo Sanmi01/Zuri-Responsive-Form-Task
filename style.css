@@ -73,13 +73,30 @@ form {
   box-shadow: 0px 5px 1px rgba(0, 0, 0, 0.4);
 }
 
-.input-div {
+.form-control {
   margin-bottom: 15px;
   outline: none;
 }
-.form-input:focus{
-  outline: 1px solid rgb(8, 8, 37);
+
+.form-control small {
+  color: #e74c3c;
+    visibility: hidden;
+    float: right;
 }
+
+.form-control.error input {
+  border-color: #e74c3c;
+}
+
+.form-control.success input {
+  border-color: #2ecc71;
+}
+
+.form-control.error small {
+  visibility: visible;
+}
+
+
 .form-input {
   outline: none;
 
