@@ -28,10 +28,8 @@ function checkEmail(input) {
 
 function checkRequired(inputArr) {
     inputArr.forEach(function(input) {
-        console.log(input)
         if(input.value.trim() === '') {
             showError(input, `${getFieldName(input)} cannot be empty`);
-            console.log(input)
         } else {
             showSuccess(input);
         }
@@ -64,7 +62,6 @@ form.addEventListener('submit', function(e) {
 
 allInputElement.forEach((el) => {
     el.addEventListener('input', (e) => {
-        console.log(el.parentElement)
         const parElement = el.parentElement
         parElement.className = 'form-control'
 

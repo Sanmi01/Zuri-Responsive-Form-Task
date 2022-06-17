@@ -84,9 +84,7 @@ form {
     float: right;
 }
 
-.form-control.error input {
-  border-color: #e74c3c;
-}
+
 
 .form-control.success input {
   border-color: #2ecc71;
@@ -98,7 +96,11 @@ form {
 
 .form-control input:focus {
   outline: 0;
-  border-color: #777;
+  border-color: rgb(43, 43, 43);
+}
+
+.form-control.error input {
+  border-color: #e74c3c;
 }
 
 
