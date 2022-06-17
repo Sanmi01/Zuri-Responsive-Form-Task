@@ -96,6 +96,11 @@ form {
   visibility: visible;
 }
 
+.form-control input:focus {
+  outline: 0;
+  border-color: #777;
+}
+
 
 .form-input {
   outline: none;

@@ -3,10 +3,10 @@ const firstname = document.getElementById('firstname');
 const lastname = document.getElementById('lastname');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
+const allInputElement = document.querySelectorAll('input')
 
 function showError(input, message) {
     const formControl = input.parentElement;
-    console.log(formControl)
     formControl.className = 'form-control error';
     const small = formControl.querySelector('small');
     small.innerText = message;
@@ -27,7 +27,6 @@ function checkEmail(input) {
 }
 
 function checkRequired(inputArr) {
-    console.log(inputArr)
     inputArr.forEach(function(input) {
         console.log(input)
         if(input.value.trim() === '') {
@@ -58,7 +57,16 @@ function getFieldName(input) {
 
 form.addEventListener('submit', function(e) {
     e.preventDefault();
-    checkLength(password, 6, 25);
     checkRequired([firstname, lastname, email, password]);
     checkEmail(email);
+    checkLength(password, 6, 25);
 });
+
+allInputElement.forEach((el) => {
+    el.addEventListener('input', (e) => {
+        console.log(el.parentElement)
+        const parElement = el.parentElement
+        parElement.className = 'form-control'
+
+    })
+})
