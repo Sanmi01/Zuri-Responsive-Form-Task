@@ -7,6 +7,8 @@ const allInputElement = document.querySelectorAll('input')
 
 function showError(input, message) {
     const formControl = input.parentElement;
+    const formInput = input
+    formInput.className = 'form-input icon-rtl'
     formControl.className = 'form-control error';
     const small = formControl.querySelector('small');
     small.innerText = message;
@@ -14,6 +16,8 @@ function showError(input, message) {
 
 function showSuccess(input) {
     const formControl = input.parentElement;
+    const formInput = input
+    formInput.className = 'form-input'
     formControl.className = 'form-control success';
 }
 
@@ -63,6 +67,8 @@ form.addEventListener('submit', function(e) {
 allInputElement.forEach((el) => {
     el.addEventListener('input', (e) => {
         const parElement = el.parentElement
+        const formInput = el
+        formInput.className = 'form-input'
         parElement.className = 'form-control'
 
     })
